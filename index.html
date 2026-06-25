@@ -113,6 +113,16 @@
             <div class="grid w-full items-center gap-10 rounded-3xl border border-[#F5C842]/35 bg-white/[0.008] bg-gradient-to-br from-white/[0.015] to-white/[0.003] p-4 text-center shadow-[0_28px_90px_rgba(0,0,0,0.2)] backdrop-blur-sm sm:p-6 md:grid-cols-[1.1fr_0.9fr] md:p-8 md:text-left lg:p-10 select-none">
                 <div class="flex flex-col items-center gap-5 md:items-start">
                     <p class="text-[#F5C842] font-semibold text-lg tracking-widest uppercase drop-shadow-[0_0_22px_rgba(245,200,66,0.36)]">Python Developer</p>
+
+                    <!-- Mobile photo between role and heading -->
+                    <div class="block md:hidden">
+                        <div class="relative mx-auto before:absolute before:-inset-3 before:rounded-3xl before:bg-[radial-gradient(circle_at_top_left,rgba(245,200,66,0.4),transparent_45%),radial-gradient(circle_at_bottom_right,rgba(245,200,66,0.3),transparent_55%)] before:blur after:absolute after:inset-[10%] after:-z-10 after:rounded-3xl after:bg-[#F5C842]/25 after:blur-3xl">
+                            <div class="relative z-10 h-[min(60vw,18rem)] w-[min(60vw,18rem)] sm:h-[min(50vw,20rem)] sm:w-[min(50vw,20rem)] overflow-hidden rounded-3xl shadow-[0_24px_60px_rgba(0,0,0,0.38)]">
+                                <img src="assets/photo.png" alt="Paban Bhandari" class="h-full w-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+
                     <h1 class="font-[Montserrat] text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
                         Hi, I'm <span class="text-[#F5C842]">Paban</span> Bhandari
                     </h1>
@@ -151,7 +161,7 @@
                 </div>
 
                 <!-- Right: Photo -->
-                <div class="flex justify-center md:justify-end md:pr-4 lg:pr-8">
+                <div class="hidden md:flex justify-center md:justify-end md:pr-4 lg:pr-8">
                     <div class="relative before:absolute before:-inset-3 before:rounded-3xl before:bg-[radial-gradient(circle_at_top_left,rgba(245,200,66,0.4),transparent_45%),radial-gradient(circle_at_bottom_right,rgba(245,200,66,0.3),transparent_55%)] before:blur after:absolute after:inset-[10%] after:-z-10 after:rounded-3xl after:bg-[#F5C842]/25 after:blur-3xl">
                         <div class="relative z-10 h-[min(60vw,18rem)] w-[min(60vw,18rem)] sm:h-[min(50vw,20rem)] sm:w-[min(50vw,20rem)] md:h-[min(40vw,22rem)] md:w-[min(40vw,22rem)] overflow-hidden rounded-3xl shadow-[0_24px_60px_rgba(0,0,0,0.38)]">
                             <img src="assets/photo.png" alt="Paban Bhandari" class="h-full w-full object-cover">

@@ -84,3 +84,7 @@
   }
 }
 
+.nav-link.active {
+  color: #F5C842;
+}
+

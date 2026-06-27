@@ -369,6 +369,140 @@
                     </div>
                 </div>
             </div>
+
+            <!-- CERTIFICATES -->
+            <div class="select-none mt-16" x-data="{ certOpen: false, certSrc: '' }">
+
+                <!-- Header -->
+                <div class="text-center mb-16">
+                    <p class="text-[#F5C842] font-semibold tracking-widest uppercase text-sm mb-2 drop-shadow-[0_0_22px_rgba(245,200,66,0.36)]">Achievements</p>
+                    <h2 class="font-[Montserrat] text-4xl sm:text-5xl font-bold">My <span class="text-[#F5C842]">Certificates</span></h2>
+                </div>
+
+                <!-- Timeline -->
+                <div class="relative max-w-3xl mx-auto">
+
+                    <!-- Vertical center line -->
+                    <div class="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[2px] border-l-2 border-dotted border-[#F5C842]/40"></div>
+
+                    <div class="flex flex-col gap-12">
+
+                        <!-- C1 - RIGHT -->
+                        <div class="flex items-center gap-4">
+                            <!-- Empty left -->
+                            <div class="flex-1"></div>
+                            <!-- Node -->
+                            <div class="w-3 h-3 rounded-full bg-[#F5C842] shadow-[0_0_10px_rgba(245,200,66,0.7)] shrink-0 relative z-10"></div>
+                            <!-- Card right -->
+                            <div class="flex-1">
+                                <div class="p-4 rounded-2xl border border-white/10 bg-white/[0.03] hover:border-[#F5C842]/50 hover:shadow-[0_8px_24px_rgba(245,200,66,0.1)] transition-all duration-300">
+                                    <img src="assets/SQC_Participation.jpg" alt="Certificate"
+                                        class="w-full h-28 object-cover rounded-lg opacity-80 hover:opacity-100 cursor-pointer hover:scale-[1.02] transition-all duration-300 mb-3"
+                                        @click="certOpen = true; certSrc = 'assets/SQC_Participation.jpg'">
+                                    <p class="text-[#F5C842] text-xs font-semibold">2018</p>
+                                    <h4 class="text-white text-sm font-bold leading-tight mt-0.5">5th SQC Hub Convention</h4>
+                                    <p class="text-gray-500 text-xs mt-0.5">Certificate of Participation</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- C2 - LEFT -->
+                        <div class="flex items-center gap-4">
+                            <!-- Card left -->
+                            <div class="flex-1">
+                                <div class="p-4 rounded-2xl border border-white/10 bg-white/[0.03] hover:border-[#F5C842]/50 hover:shadow-[0_8px_24px_rgba(245,200,66,0.1)] transition-all duration-300">
+                                    <img src="assets/SQC_Quiz_First.jpg" alt="Certificate"
+                                        class="w-full h-28 object-cover rounded-lg opacity-80 hover:opacity-100 cursor-pointer hover:scale-[1.02] transition-all duration-300 mb-3"
+                                        @click="certOpen = true; certSrc = 'assets/SQC_Quiz_First.jpg'">
+                                    <p class="text-[#F5C842] text-xs font-semibold">2018</p>
+                                    <h4 class="text-white text-sm font-bold leading-tight mt-0.5">5th SQC Hub Convention</h4>
+                                    <p class="text-gray-500 text-xs mt-0.5">Merit — 1st Position, Quality Quiz</p>
+                                </div>
+                            </div>
+                            <!-- Node -->
+                            <div class="w-3 h-3 rounded-full bg-[#F5C842] shadow-[0_0_10px_rgba(245,200,66,0.7)] shrink-0 relative z-10"></div>
+                            <!-- Empty right -->
+                            <div class="flex-1"></div>
+                        </div>
+
+                        <!-- C3 - RIGHT -->
+                        <div class="flex items-center gap-4">
+                            <!-- Empty left -->
+                            <div class="flex-1"></div>
+                            <!-- Node -->
+                            <div class="w-3 h-3 rounded-full bg-[#F5C842] shadow-[0_0_10px_rgba(245,200,66,0.7)] shrink-0 relative z-10"></div>
+                            <!-- Card right -->
+                            <div class="flex-1">
+                                <div class="p-4 rounded-2xl border border-white/10 bg-white/[0.03] hover:border-[#F5C842]/50 hover:shadow-[0_8px_24px_rgba(245,200,66,0.1)] transition-all duration-300">
+                                    <img src="assets/GYP_SYB.jpg" alt="Certificate"
+                                        class="w-full h-28 object-cover rounded-lg opacity-80 hover:opacity-100 cursor-pointer hover:scale-[1.02] transition-all duration-300 mb-3"
+                                        @click="certOpen = true; certSrc = 'assets/GYP_SYB.jpg'">
+                                    <p class="text-[#F5C842] text-xs font-semibold">National Youth Council</p>
+                                    <h4 class="text-white text-sm font-bold leading-tight mt-0.5">Generate / Start Your Business</h4>
+                                    <p class="text-gray-500 text-xs mt-0.5">Training Certificate</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- C4 - LEFT -->
+                        <div class="flex items-center gap-4">
+                            <!-- Card left -->
+                            <div class="flex-1">
+                                <div class="p-4 rounded-2xl border border-white/10 bg-white/[0.03] hover:border-[#F5C842]/50 hover:shadow-[0_8px_24px_rgba(245,200,66,0.1)] transition-all duration-300">
+                                    <img src="assets/Dursikshya_Python.jpg" alt="Certificate"
+                                        class="w-full h-28 object-cover rounded-lg opacity-80 hover:opacity-100 cursor-pointer hover:scale-[1.02] transition-all duration-300 mb-3"
+                                        @click="certOpen = true; certSrc = 'assets/Dursikshya_Python.jpg'">
+                                    <p class="text-[#F5C842] text-xs font-semibold">Dursikshya</p>
+                                    <h4 class="text-white text-sm font-bold leading-tight mt-0.5">30hrs Python Training</h4>
+                                    <p class="text-gray-500 text-xs mt-0.5">Certificate of Completion</p>
+                                </div>
+                            </div>
+                            <!-- Node -->
+                            <div class="w-3 h-3 rounded-full bg-[#F5C842] shadow-[0_0_10px_rgba(245,200,66,0.7)] shrink-0 relative z-10"></div>
+                            <!-- Empty right -->
+                            <div class="flex-1"></div>
+                        </div>
+
+                        <!-- C5 - RIGHT -->
+                        <div class="flex items-center gap-4">
+                            <!-- Empty left -->
+                            <div class="flex-1"></div>
+                            <!-- Node -->
+                            <div class="w-3 h-3 rounded-full bg-[#F5C842] shadow-[0_0_10px_rgba(245,200,66,0.7)] shrink-0 relative z-10"></div>
+                            <!-- Card right -->
+                            <div class="flex-1">
+                                <div class="p-4 rounded-2xl border border-white/10 bg-white/[0.03] hover:border-[#F5C842]/50 hover:shadow-[0_8px_24px_rgba(245,200,66,0.1)] transition-all duration-300">
+                                    <img src="assets/certificate1.png" alt="Certificate"
+                                        class="w-full h-28 object-cover rounded-lg opacity-80 hover:opacity-100 cursor-pointer hover:scale-[1.02] transition-all duration-300 mb-3"
+                                        @click="certOpen = true; certSrc = 'assets/certificate1.png'">
+                                    <p class="text-[#F5C842] text-xs font-semibold">Code IT</p>
+                                    <h4 class="text-white text-sm font-bold leading-tight mt-0.5">Python with Django</h4>
+                                    <p class="text-gray-500 text-xs mt-0.5">Certificate of Completion</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Medium Popup Modal -->
+                <div x-show="certOpen"
+                    x-transition.opacity.duration.300ms
+                    class="fixed inset-0 z-[9999] bg-black/70 backdrop-blur-sm flex items-center justify-center p-6"
+                    @click.self="certOpen = false">
+                    <div class="relative w-full max-w-lg" x-transition.scale.duration.300ms>
+                        <!-- Close button -->
+                        <button @click="certOpen = false"
+                            class="absolute -top-10 right-0 text-white hover:text-[#F5C842] transition-colors duration-300">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                        </button>
+                        <img :src="certSrc" alt="Certificate Preview" class="w-full rounded-2xl shadow-[0_24px_60px_rgba(0,0,0,0.6)]">
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 

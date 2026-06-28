@@ -108,6 +108,22 @@ window.addEventListener('load', () => {
         });
     }
 
+    const navbar = document.getElementById('main-navbar');
+    const updateNavbar = () => {
+        if (!navbar) return;
+
+        if (window.scrollY > 60) {
+            navbar.classList.add('navbar-scrolled');
+            navbar.classList.remove('bg-transparent', 'border-transparent', 'backdrop-blur-none');
+        } else {
+            navbar.classList.remove('navbar-scrolled');
+            navbar.classList.add('bg-transparent', 'border-transparent', 'backdrop-blur-none');
+        }
+    };
+
+    updateNavbar();
+    window.addEventListener('scroll', updateNavbar, { passive: true });
+
     const certificatesSection = document.getElementById('certificates-section');
     if (certificatesSection) {
         const certificateModal = document.getElementById('certificateModal');

@@ -107,4 +107,55 @@ window.addEventListener('load', () => {
             retina_detect: true
         });
     }
+
+    const certificatesSection = document.getElementById('certificates-section');
+    if (certificatesSection) {
+        const certificateModal = document.getElementById('certificateModal');
+        const modalImage = document.getElementById('certificateModalImage');
+        const closeButton = document.getElementById('closeCertificateModal');
+
+        const openCertificateModal = (src) => {
+            if (!modalImage) return;
+            modalImage.src = src;
+            certificateModal.classList.remove('hidden');
+            // Prevent layout shift by compensating for scrollbar disappearance
+            const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+            if (scrollbarWidth > 0) {
+                document.body.style.paddingRight = `${scrollbarWidth}px`;
+            }
+            document.body.classList.add('overflow-hidden');
+        };
+
+        const closeCertificateModal = () => {
+            certificateModal.classList.add('hidden');
+            if (modalImage) modalImage.src = '';
+            document.body.classList.remove('overflow-hidden');
+            // Remove any padding added to compensate for scrollbar
+            document.body.style.paddingRight = '';
+        };
+
+        certificatesSection.querySelectorAll('img').forEach((img) => {
+            img.addEventListener('click', () => {
+                if (img.getAttribute('src')) {
+                    openCertificateModal(img.getAttribute('src'));
+                }
+            });
+        });
+
+        if (closeButton) {
+            closeButton.addEventListener('click', closeCertificateModal);
+        }
+
+        certificateModal.addEventListener('click', (event) => {
+            if (event.target === certificateModal) {
+                closeCertificateModal();
+            }
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && !certificateModal.classList.contains('hidden')) {
+                closeCertificateModal();
+            }
+        });
+    }
 });

@@ -55,6 +55,10 @@
             color: #F5C842 !important;
             text-shadow: 0 0 10px rgba(245, 200, 66, 0.7);
         }
+
+        #certificates-section img {
+            cursor: zoom-in;
+        }
     </style>
 
     <!-- Alpine.js -->
@@ -294,7 +298,7 @@
             </div>
 
             <!-- EDUCATION -->
-            <div class="mb-24 select-none hidden md:block">
+            <div class="mt-24 mb-12 select-none hidden md:block">
                 <div class="text-center mb-12 px-5 sm:px-8 lg:px-12">
                     <p class="text-[#F5C842] font-semibold tracking-widest uppercase text-sm mb-2 drop-shadow-[0_0_22px_rgba(245,200,66,0.36)]">Education</p>
                     <h2 class="font-[Montserrat] text-4xl sm:text-5xl font-bold">Academic <span class="text-[#F5C842]">Background</span></h2>
@@ -302,7 +306,7 @@
                 <div class="max-w-5xl mx-auto px-5 sm:px-8 lg:px-12">
                     <div class="relative">
                         <!-- Central timeline line -->
-                        <div class="hidden md:block absolute left-1/2 top-0 bottom-0 border-l-2 border-dotted border-[#F5C842]/30 transform -translate-x-1/2"></div>
+                        <div class="hidden md:block absolute left-1/2 top-0 bottom-0 border-l-2 border-dotted border-[#F5C842] transform -translate-x-1/2"></div>
 
                         <div class="grid md:grid-cols-2 gap-12">
 
@@ -316,7 +320,7 @@
                                     </div>
                                     <div class="hidden md:flex items-center gap-3">
                                         <div class="w-3 h-3 rounded-full bg-[#F5C842]"></div>
-                                        <div class="w-8 border-t-2 border-dashed border-[#F5C842]/40"></div>
+                                        <div class="w-8 border-t-2 border-dashed border-[#F5C842]"></div>
                                     </div>
                                 </div>
                             </div>
@@ -325,7 +329,7 @@
                             <div class="flex items-center justify-center md:justify-start md:mt-20 mt-0">
                                 <div class="flex flex-col md:flex-row items-center gap-4 w-full max-w-xl mx-auto md:mx-0">
                                     <div class="hidden md:flex items-center gap-3">
-                                        <div class="w-8 border-t-2 border-dashed border-[#F5C842]/40"></div>
+                                        <div class="w-8 border-t-2 border-dashed border-[#F5C842]"></div>
                                         <div class="w-3 h-3 rounded-full bg-[#F5C842]"></div>
                                     </div>
                                     <div class="flex-1 p-5 rounded-2xl border border-white/10 bg-white/[0.03] hover:border-[#F5C842]/60 hover:shadow-[0_0_20px_rgba(245,200,66,0.2)] hover:scale-105 transition-all duration-300">
@@ -342,13 +346,12 @@
             </div>
 
             <!-- Mobile Education -->
-            <div class="md:hidden mb-16 select-none">
+            <div class="md:hidden mt-16 mb-12 select-none">
                 <div class="text-center mb-12">
                     <p class="text-[#F5C842] font-semibold tracking-widest uppercase text-sm mb-2 drop-shadow-[0_0_22px_rgba(245,200,66,0.36)]">Education</p>
                     <h2 class="font-[Montserrat] text-4xl sm:text-5xl font-bold">Academic <span class="text-[#F5C842]">Background</span></h2>
                 </div>
-
-                <div class="relative pl-6 border-l-2 border-dotted border-[#F5C842]/30 flex flex-col gap-8 mt-2">
+                <div class="relative pl-6 border-l-2 border-dotted border-[#F5C842] flex flex-col gap-8 mt-2">
                     <div class="relative">
                         <div class="absolute -left-[5px] top-2 w-3 h-3 rounded-full bg-[#F5C842] shadow-[0_0_8px_rgba(245,200,66,0.6)]"></div>
                         <div class="p-5 rounded-2xl border border-white/10 bg-white/[0.03] hover:border-[#F5C842]/60 transition-all duration-300">
@@ -371,138 +374,202 @@
             </div>
 
             <!-- CERTIFICATES -->
-            <div class="select-none mt-16" x-data="{ certOpen: false, certSrc: '' }">
-
-                <!-- Header -->
-                <div class="text-center mb-16">
-                    <p class="text-[#F5C842] font-semibold tracking-widest uppercase text-sm mb-2 drop-shadow-[0_0_22px_rgba(245,200,66,0.36)]">Achievements</p>
-                    <h2 class="font-[Montserrat] text-4xl sm:text-5xl font-bold">My <span class="text-[#F5C842]">Certificates</span></h2>
+            <div id="certificates-section" class="mt-24 mb-12 select-none">
+                <div class="text-center mb-12 px-5 sm:px-8 lg:px-12">
+                    <p class="text-[#F5C842] font-semibold tracking-widest uppercase text-sm mb-2 drop-shadow-[0_0_22px_rgba(245,200,66,0.36)]">Achievement</p>
+                    <h2 class="font-[Montserrat] text-4xl sm:text-5xl font-bold mb-6">My <span class="text-[#F5C842]">Certificates</span></h2>
                 </div>
 
-                <!-- Timeline -->
-                <div class="relative max-w-3xl mx-auto">
+                <!-- Desktop Timeline -->
+                <div class="hidden md:block mx-auto px-5 sm:px-8 lg:px-12">
+                    <div class="relative">
+                        <div class="absolute left-1/2 top-0 bottom-0 border-l-2 border-dotted border-[#F5C842] transform -translate-x-1/2"></div>
 
-                    <!-- Vertical center line -->
-                    <div class="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[2px] border-l-2 border-dotted border-[#F5C842]/40"></div>
+                        <div class="grid md:grid-cols-2 gap-x-16 gap-y-12">
 
-                    <div class="flex flex-col gap-12">
-
-                        <!-- C1 - RIGHT -->
-                        <div class="flex items-center gap-4">
-                            <!-- Empty left -->
-                            <div class="flex-1"></div>
-                            <!-- Node -->
-                            <div class="w-3 h-3 rounded-full bg-[#F5C842] shadow-[0_0_10px_rgba(245,200,66,0.7)] shrink-0 relative z-10"></div>
-                            <!-- Card right -->
-                            <div class="flex-1">
-                                <div class="p-4 rounded-2xl border border-white/10 bg-white/[0.03] hover:border-[#F5C842]/50 hover:shadow-[0_8px_24px_rgba(245,200,66,0.1)] transition-all duration-300">
-                                    <img src="assets/SQC_Participation.jpg" alt="Certificate"
-                                        class="w-full h-28 object-cover rounded-lg opacity-80 hover:opacity-100 cursor-pointer hover:scale-[1.02] transition-all duration-300 mb-3"
-                                        @click="certOpen = true; certSrc = 'assets/SQC_Participation.jpg'">
-                                    <p class="text-[#F5C842] text-xs font-semibold">2018</p>
-                                    <h4 class="text-white text-sm font-bold leading-tight mt-0.5">5th SQC Hub Convention</h4>
-                                    <p class="text-gray-500 text-xs mt-0.5">Certificate of Participation</p>
+                            <!-- Card 1 (Left) - SQC Participation -->
+                            <div class="flex items-center justify-center md:justify-end">
+                                    <div class="flex flex-col md:flex-row items-center gap-5 mx-auto md:mx-0">
+                                    <div class="w-[470px] h-[145px] px-5 py-4 rounded-2xl border border-white/10 bg-white/[0.03] hover:border-[#F5C842]/60 hover:shadow-[0_0_20px_rgba(245,200,66,0.2)] hover:scale-105 transition-all duration-300 flex items-center gap-5">
+                                        <div class="w-32 h-24 rounded-md overflow-hidden flex-shrink-0">
+                                            <img src="assets/SQC_Participation.jpg" alt="SQC Participation" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="flex-1 min-w-0">
+                                            <span class="text-xs text-[#F5C842] font-semibold tracking-widest uppercase">2018</span>
+                                            <h4 class="text-white font-bold text-lg mt-1">5th SQC Hub Convention</h4>
+                                            <p class="text-gray-400 text-sm">Certificate of Participation</p>
+                                        </div>
+                                    </div>
+                                    <div class="hidden md:flex items-center gap-3">
+                                        <div class="w-3 h-3 rounded-full bg-[#F5C842]"></div>
+                                        <div class="w-8 border-t-2 border-dashed border-[#F5C842]"></div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- C2 - LEFT -->
-                        <div class="flex items-center gap-4">
-                            <!-- Card left -->
-                            <div class="flex-1">
-                                <div class="p-4 rounded-2xl border border-white/10 bg-white/[0.03] hover:border-[#F5C842]/50 hover:shadow-[0_8px_24px_rgba(245,200,66,0.1)] transition-all duration-300">
-                                    <img src="assets/SQC_Quiz_First.jpg" alt="Certificate"
-                                        class="w-full h-28 object-cover rounded-lg opacity-80 hover:opacity-100 cursor-pointer hover:scale-[1.02] transition-all duration-300 mb-3"
-                                        @click="certOpen = true; certSrc = 'assets/SQC_Quiz_First.jpg'">
-                                    <p class="text-[#F5C842] text-xs font-semibold">2018</p>
-                                    <h4 class="text-white text-sm font-bold leading-tight mt-0.5">5th SQC Hub Convention</h4>
-                                    <p class="text-gray-500 text-xs mt-0.5">Merit — 1st Position, Quality Quiz</p>
+                            <!-- Card 2 (Right) - SQC Quiz First -->
+                            <div class="flex items-center justify-center md:justify-start">
+                                    <div class="flex flex-col md:flex-row items-center gap-5 mx-auto md:mx-0">
+                                    <div class="hidden md:flex items-center gap-3">
+                                        <div class="w-8 border-t-2 border-dashed border-[#F5C842]"></div>
+                                        <div class="w-3 h-3 rounded-full bg-[#F5C842]"></div>
+                                    </div>
+                                    <div class="w-[470px] h-[145px] px-5 py-4 rounded-2xl border border-white/10 bg-white/[0.03] hover:border-[#F5C842]/60 hover:shadow-[0_0_20px_rgba(245,200,66,0.2)] hover:scale-105 transition-all duration-300 flex items-center gap-5">
+                                        <div class="w-32 h-24 rounded-md overflow-hidden flex-shrink-0">
+                                            <img src="assets/SQC_Quiz_First.jpg" alt="SQC Quiz First" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="flex-1 min-w-0">
+                                            <span class="text-xs text-[#F5C842] font-semibold tracking-widest uppercase">2018</span>
+                                            <h4 class="text-white font-bold text-lg mt-1">5th SQC Hub Convention</h4>
+                                            <p class="text-gray-400 text-sm">1st Position — Quality Quiz</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <!-- Node -->
-                            <div class="w-3 h-3 rounded-full bg-[#F5C842] shadow-[0_0_10px_rgba(245,200,66,0.7)] shrink-0 relative z-10"></div>
-                            <!-- Empty right -->
-                            <div class="flex-1"></div>
-                        </div>
 
-                        <!-- C3 - RIGHT -->
-                        <div class="flex items-center gap-4">
-                            <!-- Empty left -->
-                            <div class="flex-1"></div>
-                            <!-- Node -->
-                            <div class="w-3 h-3 rounded-full bg-[#F5C842] shadow-[0_0_10px_rgba(245,200,66,0.7)] shrink-0 relative z-10"></div>
-                            <!-- Card right -->
-                            <div class="flex-1">
-                                <div class="p-4 rounded-2xl border border-white/10 bg-white/[0.03] hover:border-[#F5C842]/50 hover:shadow-[0_8px_24px_rgba(245,200,66,0.1)] transition-all duration-300">
-                                    <img src="assets/GYP_SYB.jpg" alt="Certificate"
-                                        class="w-full h-28 object-cover rounded-lg opacity-80 hover:opacity-100 cursor-pointer hover:scale-[1.02] transition-all duration-300 mb-3"
-                                        @click="certOpen = true; certSrc = 'assets/GYP_SYB.jpg'">
-                                    <p class="text-[#F5C842] text-xs font-semibold">National Youth Council</p>
-                                    <h4 class="text-white text-sm font-bold leading-tight mt-0.5">Generate / Start Your Business</h4>
-                                    <p class="text-gray-500 text-xs mt-0.5">Training Certificate</p>
+                            <!-- Card 3 (Left) - GYB/SYB -->
+                            <div class="flex items-center justify-center md:justify-end">
+                                    <div class="flex flex-col md:flex-row items-center gap-5 mx-auto md:mx-0">
+                                    <div class="w-[470px] h-[145px] px-5 py-4 rounded-2xl border border-white/10 bg-white/[0.03] hover:border-[#F5C842]/60 hover:shadow-[0_0_20px_rgba(245,200,66,0.2)] hover:scale-105 transition-all duration-300 flex items-center gap-5">
+                                        <div class="w-32 h-24 rounded-md overflow-hidden flex-shrink-0">
+                                            <img src="assets/GYB_SYB.jpg" alt="Generate Start Your Business" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="flex-1 min-w-0">
+                                            <span class="text-xs text-[#F5C842] font-semibold tracking-widest uppercase">National Youth Council</span>
+                                            <h4 class="text-white font-bold text-lg mt-1">Generate / Start Your Business</h4>
+                                            <p class="text-gray-400 text-sm">Training Certificate</p>
+                                        </div>
+                                    </div>
+                                    <div class="hidden md:flex items-center gap-3">
+                                        <div class="w-3 h-3 rounded-full bg-[#F5C842]"></div>
+                                        <div class="w-8 border-t-2 border-dashed border-[#F5C842]"></div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- C4 - LEFT -->
-                        <div class="flex items-center gap-4">
-                            <!-- Card left -->
-                            <div class="flex-1">
-                                <div class="p-4 rounded-2xl border border-white/10 bg-white/[0.03] hover:border-[#F5C842]/50 hover:shadow-[0_8px_24px_rgba(245,200,66,0.1)] transition-all duration-300">
-                                    <img src="assets/Dursikshya_Python.jpg" alt="Certificate"
-                                        class="w-full h-28 object-cover rounded-lg opacity-80 hover:opacity-100 cursor-pointer hover:scale-[1.02] transition-all duration-300 mb-3"
-                                        @click="certOpen = true; certSrc = 'assets/Dursikshya_Python.jpg'">
-                                    <p class="text-[#F5C842] text-xs font-semibold">Dursikshya</p>
-                                    <h4 class="text-white text-sm font-bold leading-tight mt-0.5">30hrs Python Training</h4>
-                                    <p class="text-gray-500 text-xs mt-0.5">Certificate of Completion</p>
+                            <!-- Card 4 (Right) - Dursikshya Python -->
+                            <div class="flex items-center justify-center md:justify-start">
+                                <div class="flex flex-col md:flex-row items-center gap-5 mx-auto md:mx-0">
+                                    <div class="hidden md:flex items-center gap-3">
+                                        <div class="w-8 border-t-2 border-dashed border-[#F5C842]"></div>
+                                        <div class="w-3 h-3 rounded-full bg-[#F5C842]"></div>
+                                    </div>
+                                    <div class="w-[470px] h-[145px] px-5 py-4 rounded-2xl border border-white/10 bg-white/[0.03] hover:border-[#F5C842]/60 hover:shadow-[0_0_20px_rgba(245,200,66,0.2)] hover:scale-105 transition-all duration-300 flex items-center gap-5">
+                                        <div class="w-32 h-24 rounded-md overflow-hidden flex-shrink-0">
+                                            <img src="assets/Dursikshya_Python.jpg" alt="Dursikshya Python" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="flex-1 min-w-0">
+                                            <span class="text-xs text-[#F5C842] font-semibold tracking-widest uppercase">Dursikshya</span>
+                                            <h4 class="text-white font-bold text-lg mt-1">30hrs Python Training</h4>
+                                            <p class="text-gray-400 text-sm">Certificate of Completion</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <!-- Node -->
-                            <div class="w-3 h-3 rounded-full bg-[#F5C842] shadow-[0_0_10px_rgba(245,200,66,0.7)] shrink-0 relative z-10"></div>
-                            <!-- Empty right -->
-                            <div class="flex-1"></div>
-                        </div>
 
-                        <!-- C5 - RIGHT -->
-                        <div class="flex items-center gap-4">
-                            <!-- Empty left -->
-                            <div class="flex-1"></div>
-                            <!-- Node -->
-                            <div class="w-3 h-3 rounded-full bg-[#F5C842] shadow-[0_0_10px_rgba(245,200,66,0.7)] shrink-0 relative z-10"></div>
-                            <!-- Card right -->
-                            <div class="flex-1">
-                                <div class="p-4 rounded-2xl border border-white/10 bg-white/[0.03] hover:border-[#F5C842]/50 hover:shadow-[0_8px_24px_rgba(245,200,66,0.1)] transition-all duration-300">
-                                    <img src="assets/certificate1.png" alt="Certificate"
-                                        class="w-full h-28 object-cover rounded-lg opacity-80 hover:opacity-100 cursor-pointer hover:scale-[1.02] transition-all duration-300 mb-3"
-                                        @click="certOpen = true; certSrc = 'assets/certificate1.png'">
-                                    <p class="text-[#F5C842] text-xs font-semibold">Code IT</p>
-                                    <h4 class="text-white text-sm font-bold leading-tight mt-0.5">Python with Django</h4>
-                                    <p class="text-gray-500 text-xs mt-0.5">Certificate of Completion</p>
+                            <!-- Card 5 (Left) - Code IT (placeholder) -->
+                            <div class="flex items-center justify-center md:justify-end">
+                                    <div class="flex flex-col md:flex-row items-center gap-5 mx-auto md:mx-0">
+                                    <div class="w-[470px] h-[145px] px-5 py-4 rounded-2xl border border-white/10 bg-white/[0.03] hover:border-[#F5C842]/60 hover:shadow-[0_0_20px_rgba(245,200,66,0.2)] hover:scale-105 transition-all duration-300 flex items-center gap-5">
+                                        <div class="w-32 h-24 rounded-md overflow-hidden flex-shrink-0">
+                                            <img src="assets/GYB_SYB.jpg" alt="Code IT - Python with Django" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="flex-1 min-w-0">
+                                            <span class="text-xs text-[#F5C842] font-semibold tracking-widest uppercase">Code IT</span>
+                                            <h4 class="text-white font-bold text-lg mt-1">Python with Django</h4>
+                                            <p class="text-gray-400 text-sm">Certificate of Completion</p>
+                                        </div>
+                                    </div>
+                                    <div class="hidden md:flex items-center gap-3">
+                                        <div class="w-3 h-3 rounded-full bg-[#F5C842]"></div>
+                                        <div class="w-8 border-t-2 border-dashed border-[#F5C842]"></div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
+                        </div>
                     </div>
                 </div>
 
-                <!-- Medium Popup Modal -->
-                <div x-show="certOpen"
-                    x-transition.opacity.duration.300ms
-                    class="fixed inset-0 z-[9999] bg-black/70 backdrop-blur-sm flex items-center justify-center p-6"
-                    @click.self="certOpen = false">
-                    <div class="relative w-full max-w-lg" x-transition.scale.duration.300ms>
-                        <!-- Close button -->
-                        <button @click="certOpen = false"
-                            class="absolute -top-10 right-0 text-white hover:text-[#F5C842] transition-colors duration-300">
-                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                            </svg>
-                        </button>
-                        <img :src="certSrc" alt="Certificate Preview" class="w-full rounded-2xl shadow-[0_24px_60px_rgba(0,0,0,0.6)]">
+                <!-- Mobile Timeline -->
+                <div class="md:hidden relative pl-6 border-l-2 border-dotted border-[#F5C842] flex flex-col gap-8 mt-2 px-4">
+                    <!-- Mobile item 1 - SQC Participation -->
+                    <div class="relative">
+                        <div class="absolute -left-[5px] top-2 w-3 h-3 rounded-full bg-[#F5C842] shadow-[0_0_8px_rgba(245,200,66,0.6)]"></div>
+                        <div class="p-4 rounded-2xl border border-white/10 bg-white/[0.03] hover:border-[#F5C842]/60 transition-all duration-300 flex items-center gap-3">
+                            <div class="w-20 h-14 rounded-md overflow-hidden flex-shrink-0">
+                                <img src="assets/SQC_Participation.jpg" alt="SQC Participation" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <span class="text-xs text-[#F5C842] font-semibold tracking-widest uppercase">2018</span>
+                                <h4 class="text-white font-bold text-sm mt-1">5th SQC Hub Convention</h4>
+                                <p class="text-gray-400 text-xs">Certificate of Participation</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mobile item 2 - SQC Quiz First -->
+                    <div class="relative">
+                        <div class="absolute -left-[5px] top-2 w-3 h-3 rounded-full bg-[#F5C842] shadow-[0_0_8px_rgba(245,200,66,0.6)]"></div>
+                        <div class="p-4 rounded-2xl border border-white/10 bg-white/[0.03] hover:border-[#F5C842]/60 transition-all duration-300 flex items-center gap-3">
+                            <div class="w-20 h-14 rounded-md overflow-hidden flex-shrink-0">
+                                <img src="assets/SQC_Quiz_First.jpg" alt="SQC Quiz First" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <span class="text-xs text-[#F5C842] font-semibold tracking-widest uppercase">2018</span>
+                                <h4 class="text-white font-bold text-sm mt-1">5th SQC Hub Convention</h4>
+                                <p class="text-gray-400 text-xs">1st Position — Quality Quiz</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mobile item 3 - GYB/SYB -->
+                    <div class="relative">
+                        <div class="absolute -left-[5px] top-2 w-3 h-3 rounded-full bg-[#F5C842] shadow-[0_0_8px_rgba(245,200,66,0.6)]"></div>
+                        <div class="p-4 rounded-2xl border border-white/10 bg-white/[0.03] hover:border-[#F5C842]/60 transition-all duration-300 flex items-center gap-3">
+                            <div class="w-20 h-14 rounded-md overflow-hidden flex-shrink-0">
+                                <img src="assets/GYB_SYB.jpg" alt="Generate Start Your Business" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <span class="text-xs text-[#F5C842] font-semibold tracking-widest uppercase">National Youth Council</span>
+                                <h4 class="text-white font-bold text-sm mt-1">Generate / Start Your Business</h4>
+                                <p class="text-gray-400 text-xs">Training Certificate</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mobile item 4 - Dursikshya Python -->
+                    <div class="relative">
+                        <div class="absolute -left-[5px] top-2 w-3 h-3 rounded-full bg-[#F5C842] shadow-[0_0_8px_rgba(245,200,66,0.6)]"></div>
+                        <div class="p-4 rounded-2xl border border-white/10 bg-white/[0.03] hover:border-[#F5C842]/60 transition-all duration-300 flex items-center gap-3">
+                            <div class="w-20 h-14 rounded-md overflow-hidden flex-shrink-0">
+                                <img src="assets/Dursikshya_Python.jpg" alt="Dursikshya Python" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <span class="text-xs text-[#F5C842] font-semibold tracking-widest uppercase">Dursikshya</span>
+                                <h4 class="text-white font-bold text-sm mt-1">30hrs Python Training</h4>
+                                <p class="text-gray-400 text-xs">Certificate of Completion</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mobile item 5 - Code IT (placeholder) -->
+                    <div class="relative">
+                        <div class="absolute -left-[5px] top-2 w-3 h-3 rounded-full bg-[#F5C842] shadow-[0_0_8px_rgba(245,200,66,0.6)]"></div>
+                        <div class="p-4 rounded-2xl border border-white/10 bg-white/[0.03] hover:border-[#F5C842]/60 transition-all duration-300 flex items-center gap-3">
+                            <div class="w-20 h-14 rounded-md overflow-hidden flex-shrink-0">
+                                <img src="assets/GYB_SYB.jpg" alt="Code IT - Python with Django" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <span class="text-xs text-[#F5C842] font-semibold tracking-widest uppercase">Code IT</span>
+                                <h4 class="text-white font-bold text-sm mt-1">Python with Django</h4>
+                                <p class="text-gray-400 text-xs">Certificate of Completion</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
             </div>
+            
         </div>
     </section>
 
@@ -510,6 +577,19 @@
 
 
     <!-- CONTACT -->
+
+    <div id="certificateModal" class="hidden fixed inset-0 z-[1100] bg-black/85 backdrop-blur-sm p-3 sm:p-5 lg:p-8">
+        <div class="relative mx-auto flex h-full w-full items-center justify-center">
+            <div class="relative inline-block">
+                <button type="button" id="closeCertificateModal" class="fixed top-6 right-6 z-[1200] flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white hover:scale-105 transition" aria-label="Close certificate">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+                <img id="certificateModalImage" src="" alt="Certificate preview" class="max-h-[85vh] max-w-[90vw] lg:max-w-[750px] xl:max-w-[850px] object-contain rounded-2xl border border-white/15 shadow-[0_20px_70px_rgba(0,0,0,0.45)]">
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>

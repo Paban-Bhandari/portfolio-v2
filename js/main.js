@@ -175,3 +175,69 @@ window.addEventListener('load', () => {
         });
     }
 });
+
+// Initialize EmailJS
+if (typeof emailjs !== 'undefined') {
+    emailjs.init("Jy04q4eVfNerskfqF");
+}
+
+// Contact form handling
+const contactForm = document.querySelector('.contact-form');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        
+        submitBtn.innerHTML = '<i class="bi bi-hourglass-split me-2"></i>Sending...';
+        submitBtn.disabled = true;
+        
+        if (typeof emailjs === 'undefined') {
+            showNotification('Email service is unavailable right now. Please email me directly.', 'error');
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+            return;
+        }
+
+        // Send email using EmailJS
+        emailjs.sendForm('service_dwnmjzs', 'template_ds7q5ek', this)
+            .then(function() {
+                showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
+                contactForm.reset();
+            }, function(error) {
+                showNotification('Failed to send message. Please try again.', 'error');
+                console.log('EmailJS Error:', error);
+            })
+            .finally(function() {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            });
+    });
+}
+
+// Notification function
+function showNotification(message, type = 'success') {
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.className = `notification notification-${type}`;
+    notification.innerHTML = `
+        <div class="notification-content">
+            <i class="bi bi-${type === 'success' ? 'check-circle' : 'exclamation-circle'} me-2"></i>
+            ${message}
+        </div>
+    `;
+    
+    // Add to page
+    document.body.appendChild(notification);
+    
+    // Trigger animation
+    setTimeout(() => notification.classList.add('show'), 100);
+    
+    // Remove after delay
+    setTimeout(() => {
+        notification.classList.remove('show');
+        setTimeout(() => document.body.removeChild(notification), 300);
+    }, 3000);
+}

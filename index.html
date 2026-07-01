@@ -66,6 +66,7 @@
 
     <!-- Particles.js -->
     <script defer src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script defer src="js/main.js"></script>
 </head>
 
@@ -147,7 +148,7 @@
 
                     <!-- Buttons -->
                     <div class="mt-2 flex flex-wrap items-center justify-center gap-4 md:justify-start">
-                        <a href="#projects" class="inline-flex min-h-12 items-center justify-center rounded-xl bg-[#F5C842] px-6 py-3 font-bold text-[#242424] shadow-[0_14px_32px_rgba(245,200,66,0.24)] transition duration-300 hover:-translate-y-1 hover:text-[#ffffff]  hover:scale-105">
+                        <a href="#projects" class="inline-flex min-h-12 items-center justify-center rounded-xl bg-[#F5C842] px-6 py-3 font-bold text-[#242424] shadow-[0_14px_32px_rgba(245,200,66,0.24)] transition duration-300 hover:-translate-y-1  hover:scale-105">
                             View Projects
                         </a>
                         <a href="#contact" class="inline-flex min-h-12 items-center justify-center rounded-xl border border-white/80 bg-white/[0.03] px-6 py-3 font-bold text-white transition duration-300 hover:-translate-y-0.5 hover:border-[#F5C842] hover:text-[#F5C842]">
@@ -574,7 +575,7 @@
             <div id="experience" class="mt-24 mb-12 select-none">
                 <div class="text-center mb-12 px-5 sm:px-8 lg:px-12">
                     <p class="text-[#F5C842] font-semibold tracking-widest uppercase text-sm mb-2 drop-shadow-[0_0_22px_rgba(245,200,66,0.36)]">Work Experience</p>
-                    <h2 class="font-[Montserrat] text-4xl sm:text-5xl font-bold">Internship <span class="text-[#F5C842]">Experience</span></h2>
+                    <h2 class="font-[Montserrat] text-4xl sm:text-5xl font-bold">Where I've <span class="text-[#F5C842]">Worked</span></h2>
                 </div>
                 <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
                     <div class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 shadow-[0_28px_90px_rgba(0,0,0,0.18)]">
@@ -625,7 +626,8 @@
 
 
     <!-- CONTACT -->
-    <section id="contact" class="mt-28 mb-16 select-none">
+    <section id="contact" class="relative pt-20 pb-20 bg-[#111111] px-5 sm:px-8 lg:px-12">
+
         <!-- Heading -->
         <div class="text-center mb-14 px-5 sm:px-8 lg:px-12">
             <p class="text-[#F5C842] font-semibold tracking-widest uppercase text-sm mb-2 drop-shadow-[0_0_22px_rgba(245,200,66,0.36)]">
@@ -637,173 +639,136 @@
             </h2>
 
             <p class="text-gray-400 mt-5 max-w-2xl mx-auto">
-                Have a project, internship opportunity, or just want to say hello?
-                Feel free to reach out—I'd love to hear from you.
+                Have a project, internship opportunity, or just want to say hello? Reach out and I’ll respond as soon as I can.
             </p>
         </div>
 
         <!-- Main Card -->
-        <div class="max-w-6xl mx-auto px-5 sm:px-8 lg:px-12">
-            <div class="grid lg:grid-cols-2 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-xl">
+        <div class="max-w-6xl mx-auto">
+            <div class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] shadow-[0_40px_90px_rgba(0,0,0,0.32)] backdrop-blur-xl">
+                <div class="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
+                    <!-- LEFT : CONTACT FORM -->
+                    <div class="relative z-10 p-8 lg:p-12">
+                        <h3 class="text-3xl font-bold text-white mb-4">
+                            Send Me a Message
+                        </h3>
 
-                <!-- LEFT : CONTACT FORM -->
-                <div class="p-8 lg:p-10">
-
-                    <h3 class="text-2xl font-bold text-white mb-8">
-                        Send Me a Message
-                    </h3>
-
-                    <form class="contact-form space-y-6">
-
-                        <div>
-                            <label class="block text-sm text-[#F5C842] mb-2">
-                                Full Name
-                            </label>
-
-                            <input
-                                type="text"
-                                name="name"
-                                required
-                                class="w-full rounded-xl bg-white/[0.03] border border-white/10 px-4 py-3 text-white placeholder-gray-500 outline-none focus:border-[#F5C842] transition"
-                                placeholder="John Doe">
-                        </div>
-
-                        <div>
-                            <label class="block text-sm text-[#F5C842] mb-2">
-                                Email Address
-                            </label>
-
-                            <input
-                                type="email"
-                                name="email"
-                                required
-                                class="w-full rounded-xl bg-white/[0.03] border border-white/10 px-4 py-3 text-white placeholder-gray-500 outline-none focus:border-[#F5C842] transition"
-                                placeholder="john@example.com">
-                        </div>
-
-                        <div>
-                            <label class="block text-sm text-[#F5C842] mb-2">
-                                Subject
-                            </label>
-
-                            <input
-                                type="text"
-                                name="subject"
-                                required
-                                class="w-full rounded-xl bg-white/[0.03] border border-white/10 px-4 py-3 text-white placeholder-gray-500 outline-none focus:border-[#F5C842] transition"
-                                placeholder="Let's work together">
-                        </div>
-
-                        <div>
-                            <label class="block text-sm text-[#F5C842] mb-2">
-                                Message
-                            </label>
-
-                            <textarea
-                                rows="6"
-                                name="message"
-                                required
-                                class="w-full rounded-xl bg-white/[0.03] border border-white/10 px-4 py-3 text-white placeholder-gray-500 outline-none resize-none focus:border-[#F5C842] transition"
-                                placeholder="Write your message..."></textarea>
-                        </div>
-
-                        <button
-                            type="submit"
-                            class="w-full rounded-xl bg-[#F5C842] py-3 font-semibold text-black hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(245,200,66,0.45)] transition-all duration-300">
-
-                            ✈ Send Message
-
-                        </button>
-
-                    </form>
-
-                </div>
-
-                <!-- RIGHT : CONTACT INFO -->
-                <div class="border-t lg:border-t-0 lg:border-l border-white/10 bg-black/10 p-8 lg:p-10">
-
-                    <h3 class="text-2xl font-bold text-white mb-8">
-                        Contact Information
-                    </h3>
-
-                    <div class="space-y-8">
-
-                        <!-- Email -->
-                        <div class="flex items-start gap-4">
-
-                            <div class="w-12 h-12 rounded-xl bg-[#F5C842]/15 flex items-center justify-center text-xl">
-                                📧
+                        <form class="contact-form space-y-6">
+                            <div>
+                                <label class="block text-sm text-[#F5C842] mb-2">Full Name</label>
+                                <input
+                                    type="text"
+                                    name="name"
+                                    required
+                                    class="w-full rounded-[1.5rem] bg-white/[0.04] border border-white/10 px-4 py-3 text-white placeholder-gray-500 outline-none focus:border-[#F5C842] focus:ring-2 focus:ring-[#F5C842]/20 transition"
+                                    placeholder="John Doe">
                             </div>
 
                             <div>
-                                <p class="text-sm text-gray-400">
-                                    Email
-                                </p>
-
-                                <a
-                                    href="mailto:bhandaripawan841@gmail.com"
-                                    class="text-white hover:text-[#F5C842] transition">
-
-                                    bhandaripawan841@gmail.com
-
-                                </a>
-                            </div>
-
-                        </div>
-
-                        <!-- Location -->
-                        <div class="flex items-start gap-4">
-
-                            <div class="w-12 h-12 rounded-xl bg-[#F5C842]/15 flex items-center justify-center text-xl">
-                                📍
+                                <label class="block text-sm text-[#F5C842] mb-2">Email Address</label>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    required
+                                    class="w-full rounded-[1.5rem] bg-white/[0.04] border border-white/10 px-4 py-3 text-white placeholder-gray-500 outline-none focus:border-[#F5C842] focus:ring-2 focus:ring-[#F5C842]/20 transition"
+                                    placeholder="john@example.com">
                             </div>
 
                             <div>
-                                <p class="text-sm text-gray-400">
-                                    Location
-                                </p>
+                                <label class="block text-sm text-[#F5C842] mb-2">Subject</label>
+                                <input
+                                    type="text"
+                                    name="subject"
+                                    required
+                                    class="w-full rounded-[1.5rem] bg-white/[0.04] border border-white/10 px-4 py-3 text-white placeholder-gray-500 outline-none focus:border-[#F5C842] focus:ring-2 focus:ring-[#F5C842]/20 transition"
+                                    placeholder="Let's work together">
+                            </div>
 
-                                <p class="text-white">
-                                    Kathmandu, Nepal
-                                </p>
+                            <div>
+                                <label class="block text-sm text-[#F5C842] mb-2">Message</label>
+                                <textarea
+                                    rows="6"
+                                    name="message"
+                                    required
+                                    class="w-full rounded-[1.5rem] bg-white/[0.04] border border-white/10 px-4 py-3 text-white placeholder-gray-500 outline-none resize-none focus:border-[#F5C842] focus:ring-2 focus:ring-[#F5C842]/20 transition"
+                                    placeholder="Write your message..."></textarea>
+                            </div>
+
+                            <div class="space-y-3 text-center">
+                                <button
+                                    type="submit"
+                                    class="w-full rounded-[1.5rem] bg-[#F5C842] py-3 font-semibold text-black hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(245,200,66,0.45)] transition-all duration-300">
+                                    ✈ Send Message
+                                </button>
+                                <p class="text-sm text-gray-400 mx-auto max-w-xs">Usually replies within 1-2 business days.</p>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- RIGHT : CONTACT INFO -->
+                    <div class="relative z-10 overflow-hidden border-t lg:border-t-0 lg:border-l border-white/10 bg-white/[0.03] p-8 lg:p-12">
+                        <div class="rounded-[1.75rem] border border-white/10 bg-white/[0.025] p-6 mb-10 text-center">
+                            <span class="inline-flex rounded-full bg-[#F5C842]/10 px-3 py-1.5 text-sm font-semibold text-[#F5C842]">Available for hire</span>
+                            <p class="mt-4 text-gray-300">Open to freelance work, internships, and full-time opportunities. Let's bring your next web app or product idea to life.</p>
+                        </div>
+
+                        <div class="mx-auto mb-8 h-px w-24 bg-white/10"></div>
+                        <h3 class="text-2xl font-bold text-white mb-8 text-center">Contact Information</h3>
+
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-4 rounded-3xl border border-white/10 bg-white/[0.02] p-4">
+                                <div class="flex h-8 w-8 items-center justify-center text-[#F5C842]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 8v10a2 2 0 01-2 2H5a2 2 0 01-2-2V8" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-400">Email</p>
+                                    <a href="mailto:bhandaripawan841@gmail.com" class="text-white hover:text-[#F5C842] transition">bhandaripawan841@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-4 rounded-3xl border border-white/10 bg-white/[0.02] p-4">
+                                <div class="flex h-8 w-8 items-center justify-center text-[#F5C842]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 21s7-5.2 7-11a7 7 0 10-14 0c0 5.8 7 11 7 11z" />
+                                        <circle cx="12" cy="10" r="2.5" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-400">Location</p>
+                                    <p class="text-white">Kathmandu, Nepal</p>
+                                </div>
                             </div>
 
                         </div>
 
+                        <!-- Divider -->
+                        <div class="h-px bg-white/10 my-10"></div>
+
+                        <!-- Social Links -->
+                        <h4 class="text-white font-semibold mb-5 text-center">Connect With Me</h4>
+
+                        <div class="flex flex-wrap justify-center gap-3 text-center">
+                            <a href="https://github.com/Paban-Bhandari" target="_blank" rel="noopener noreferrer" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/[0.06] text-gray-300 transition duration-300 hover:-translate-y-1 hover:border-[#F5C842]/70 hover:bg-[#F5C842]/10 hover:text-[#F5C842]" aria-label="GitHub">
+                                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/paban-bhandari-b38239264/" target="_blank" rel="noopener noreferrer" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/[0.06] text-gray-300 transition duration-300 hover:-translate-y-1 hover:border-[#F5C842]/70 hover:bg-[#F5C842]/10 hover:text-[#F5C842]" aria-label="LinkedIn">
+                                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/quixotix__01/" target="_blank" rel="noopener noreferrer" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/[0.06] text-gray-300 transition duration-300 hover:-translate-y-1 hover:border-[#F5C842]/70 hover:bg-[#F5C842]/10 hover:text-[#F5C842]" aria-label="Instagram">
+                                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
-
-                    <!-- Divider -->
-                    <div class="h-px bg-white/10 my-10"></div>
-
-                    <!-- Social Links -->
-                    <h4 class="text-white font-semibold mb-5">
-                        Connect With Me
-                    </h4>
-
-                    <div class="flex flex-wrap gap-3">
-
-                        <a href="https://github.com/Paban-Bhandari"
-                            target="_blank"
-                            class="px-5 py-2 rounded-full border border-white/10 bg-white/[0.03] hover:border-[#F5C842]/60 hover:text-[#F5C842] transition">
-                            GitHub
-                        </a>
-
-                        <a href="https://www.linkedin.com/in/paban-bhandari-b38239264/"
-                            target="_blank"
-                            class="px-5 py-2 rounded-full border border-white/10 bg-white/[0.03] hover:border-[#F5C842]/60 hover:text-[#F5C842] transition">
-                            LinkedIn
-                        </a>
-
-                        <a href="https://www.instagram.com/quixotix__01/"
-                            target="_blank"
-                            class="px-5 py-2 rounded-full border border-white/10 bg-white/[0.03] hover:border-[#F5C842]/60 hover:text-[#F5C842] transition">
-                            Instagram
-                        </a>
-
-                    </div>
-
                 </div>
-
             </div>
         </div>
     </section>

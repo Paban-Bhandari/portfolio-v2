@@ -789,6 +789,10 @@ video {
   height: 2rem;
 }
 
+.h-\[145px\] {
+  height: 145px;
+}
+
 .h-\[min\(60vw\2c 18rem\)\] {
   height: min(60vw, 18rem);
 }
@@ -809,8 +813,8 @@ video {
   min-height: 3rem;
 }
 
-.min-h-\[145px\] {
-  min-height: 145px;
+.min-h-\[96px\] {
+  min-height: 96px;
 }
 
 .min-h-\[calc\(100vh-6rem\)\] {
@@ -1950,6 +1954,10 @@ video {
 
   .sm\:h-\[min\(50vw\2c 20rem\)\] {
     height: min(50vw, 20rem);
+  }
+
+  .sm\:w-\[470px\] {
+    width: 470px;
   }
 
   .sm\:w-\[min\(50vw\2c 20rem\)\] {

@@ -51,6 +51,22 @@
             scroll-behavior: smooth;
         }
 
+        body {
+            overflow-x: hidden;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
         .nav-link.active {
             color: #F5C842 !important;
             text-shadow: 0 0 10px rgba(245, 200, 66, 0.7);
@@ -83,13 +99,13 @@
     </div>
 
     <!-- NAVBAR -->
-    <nav id="main-navbar" x-data="{ open: false }" class="fixed top-0 left-0 w-full z-50 bg-transparent border-b border-transparent backdrop-blur-none px-12 py-2 transition-all duration-300">
+    <nav id="main-navbar" x-data="{ open: false }" class="fixed top-0 left-0 w-full z-50 bg-transparent border-b border-transparent backdrop-blur-none px-4 py-2 sm:px-6 lg:px-12 transition-all duration-300">
         <div class="max-w-6xl mx-auto flex items-center justify-between">
 
             <!-- Logo + Name -->
-            <a href="#home" class="flex items-center gap-3">
-                <img src="assets/LOGO.png" alt="Paban Bhandari Logo" class="h-10 w-auto select-none">
-                <span class="text-white hover:text-[#F5C842] transition-colors duration-300 font-bold text-xl tracking-wide font-[Montserrat] select-none">Paban Bhandari</span>
+            <a href="#home" class="flex items-center gap-2 sm:gap-3">
+                <img src="assets/LOGO.png" alt="Paban Bhandari Logo" class="h-8 w-auto select-none sm:h-10">
+                <span class="text-white hover:text-[#F5C842] transition-colors duration-300 font-bold text-sm tracking-wide font-[Montserrat] select-none sm:text-lg lg:text-xl">Paban Bhandari</span>
             </a>
 
             <!-- Desktop Nav Links -->
@@ -122,7 +138,7 @@
     </nav>
 
     <!-- HERO -->
-    <section id="home" class="relative min-h-screen overflow-hidden bg-[#111111] px-5 pt-[5rem] sm:px-8 lg:px-12">
+    <section id="home" class="relative min-h-screen overflow-hidden bg-[#111111] px-3 pt-[4.5rem] sm:px-8 lg:px-12">
         <div id="particles-js" class="absolute inset-0 z-0" aria-hidden="true"></div>
 
         <div class="relative z-10 mx-auto flex min-h-[calc(100vh-6rem)] max-w-6xl items-start py-6">
@@ -139,7 +155,7 @@
                         </div>
                     </div>
 
-                    <h1 class="font-[Montserrat] text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
+                    <h1 class="font-[Montserrat] text-3xl font-bold leading-tight sm:text-4xl lg:text-6xl">
                         Hi, I'm <span class="text-[#F5C842]">Paban</span> Bhandari
                     </h1>
                     <p class="max-w-xl text-base leading-relaxed text-gray-300 md:text-lg">
@@ -147,7 +163,7 @@
                     </p>
 
                     <!-- Buttons -->
-                    <div class="mt-2 flex flex-wrap items-center justify-center gap-4 md:justify-start">
+                    <div class="mt-2 flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-start">
                         <a href="#projects" class="inline-flex min-h-12 items-center justify-center rounded-xl bg-[#F5C842] px-6 py-3 font-bold text-[#242424] shadow-[0_14px_32px_rgba(245,200,66,0.24)] transition duration-300 hover:-translate-y-1  hover:scale-105">
                             View Projects
                         </a>
@@ -190,14 +206,14 @@
 
 
     <!-- ABOUT -->
-    <section id="about" class="bg-[#111111] pt-12 pb-20 px-5 sm:px-8 lg:px-12">
+    <section id="about" class="bg-[#111111] pt-10 pb-16 px-4 sm:px-8 lg:px-12 lg:pt-12 lg:pb-20">
         <div class="mx-auto max-w-6xl">
             <!-- TECH STACK -->
             <div class="mb-12 select-none">
                 <!-- Header -->
-                <div class="text-center mb-12 px-5 sm:px-8 lg:px-12">
+                <div class="text-center mb-10 px-2 sm:px-8 lg:px-12">
                     <p class="text-[#F5C842] font-semibold tracking-widest uppercase text-sm mb-2 drop-shadow-[0_0_22px_rgba(245,200,66,0.36)]">Tech Stack</p>
-                    <h2 class="font-[Montserrat] text-4xl sm:text-5xl font-bold">Technologies I <span class="text-[#F5C842]">Work With</span></h2>
+                    <h2 class="font-[Montserrat] text-3xl sm:text-4xl lg:text-5xl font-bold">Technologies I <span class="text-[#F5C842]">Work With</span></h2>
                 </div>
                 <div class="marquee-container overflow-hidden bg-[#111111] p-4">
                     <div class="relative">
@@ -300,11 +316,11 @@
 
             <!-- EDUCATION -->
             <div class="mt-12 mb-12 select-none hidden md:block">
-                <div class="text-center mb-12 px-5 sm:px-8 lg:px-12">
+                <div class="text-center mb-10 px-2 sm:px-8 lg:px-12">
                     <p class="text-[#F5C842] font-semibold tracking-widest uppercase text-sm mb-2 drop-shadow-[0_0_22px_rgba(245,200,66,0.36)]">Education</p>
-                    <h2 class="font-[Montserrat] text-4xl sm:text-5xl font-bold">Academic <span class="text-[#F5C842]">Background</span></h2>
+                    <h2 class="font-[Montserrat] text-3xl sm:text-4xl lg:text-5xl font-bold">Academic <span class="text-[#F5C842]">Background</span></h2>
                 </div>
-                <div class="max-w-5xl mx-auto px-5 sm:px-8 lg:px-12">
+                <div class="max-w-5xl mx-auto px-2 sm:px-8 lg:px-12">
                     <div class="relative">
                         <!-- Central timeline line -->
                         <div class="hidden md:block absolute left-1/2 top-0 bottom-0 border-l-2 border-dotted border-[#F5C842] transform -translate-x-1/2"></div>
@@ -348,9 +364,9 @@
 
             <!-- Mobile Education -->
             <div class="md:hidden mt-16 mb-12 select-none">
-                <div class="text-center mb-12">
+                <div class="text-center mb-10 px-2">
                     <p class="text-[#F5C842] font-semibold tracking-widest uppercase text-sm mb-2 drop-shadow-[0_0_22px_rgba(245,200,66,0.36)]">Education</p>
-                    <h2 class="font-[Montserrat] text-4xl sm:text-5xl font-bold">Academic <span class="text-[#F5C842]">Background</span></h2>
+                    <h2 class="font-[Montserrat] text-3xl sm:text-4xl lg:text-5xl font-bold">Academic <span class="text-[#F5C842]">Background</span></h2>
                 </div>
                 <div class="relative pl-6 border-l-2 border-dotted border-[#F5C842] flex flex-col gap-8 mt-2">
                     <div class="relative">
@@ -376,13 +392,13 @@
 
             <!-- CERTIFICATES -->
             <div id="certificates-section" class="mt-16 mb-12 select-none">
-                <div class="text-center mb-12 px-5 sm:px-8 lg:px-12">
+                <div class="text-center mb-10 px-2 sm:px-8 lg:px-12">
                     <p class="text-[#F5C842] font-semibold tracking-widest uppercase text-sm mb-2 drop-shadow-[0_0_22px_rgba(245,200,66,0.36)]">Achievement</p>
-                    <h2 class="font-[Montserrat] text-4xl sm:text-5xl font-bold mb-6">My <span class="text-[#F5C842]">Certificates</span></h2>
+                    <h2 class="font-[Montserrat] text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">My <span class="text-[#F5C842]">Certificates</span></h2>
                 </div>
 
                 <!-- Desktop Timeline -->
-                <div class="hidden md:block mx-auto px-5 sm:px-8 lg:px-12">
+                <div class="hidden md:block mx-auto px-2 sm:px-8 lg:px-12">
                     <div class="relative">
                         <div class="absolute left-1/2 top-0 bottom-0 border-l-2 border-dotted border-[#F5C842] transform -translate-x-1/2"></div>
 
@@ -391,7 +407,7 @@
                             <!-- Card 1 (Left) - SQC Participation -->
                             <div class="flex items-center justify-center md:justify-end">
                                     <div class="flex flex-col md:flex-row items-center gap-5 mx-auto md:mx-0">
-                                    <div class="w-[470px] h-[145px] px-5 py-4 rounded-2xl border border-white/10 bg-white/[0.03] hover:border-[#F5C842]/60 hover:shadow-[0_0_20px_rgba(245,200,66,0.2)] hover:scale-105 transition-all duration-300 flex items-center gap-5">
+                                    <div class="w-full max-w-[470px] min-h-[145px] px-5 py-4 rounded-2xl border border-white/10 bg-white/[0.03] hover:border-[#F5C842]/60 hover:shadow-[0_0_20px_rgba(245,200,66,0.2)] hover:scale-105 transition-all duration-300 flex items-center gap-5">
                                         <div class="w-32 h-24 rounded-md overflow-hidden flex-shrink-0">
                                             <img src="assets/SQC_Participation.jpg" alt="SQC Participation" class="w-full h-full object-cover">
                                         </div>
@@ -415,7 +431,7 @@
                                         <div class="w-8 border-t-2 border-dashed border-[#F5C842]"></div>
                                         <div class="w-3 h-3 rounded-full bg-[#F5C842]"></div>
                                     </div>
-                                    <div class="w-[470px] h-[145px] px-5 py-4 rounded-2xl border border-white/10 bg-white/[0.03] hover:border-[#F5C842]/60 hover:shadow-[0_0_20px_rgba(245,200,66,0.2)] hover:scale-105 transition-all duration-300 flex items-center gap-5">
+                                    <div class="w-full max-w-[470px] min-h-[145px] px-5 py-4 rounded-2xl border border-white/10 bg-white/[0.03] hover:border-[#F5C842]/60 hover:shadow-[0_0_20px_rgba(245,200,66,0.2)] hover:scale-105 transition-all duration-300 flex items-center gap-5">
                                         <div class="w-32 h-24 rounded-md overflow-hidden flex-shrink-0">
                                             <img src="assets/SQC_Quiz_First.jpg" alt="SQC Quiz First" class="w-full h-full object-cover">
                                         </div>
@@ -431,7 +447,7 @@
                             <!-- Card 3 (Left) - GYB/SYB -->
                             <div class="flex items-center justify-center md:justify-end">
                                     <div class="flex flex-col md:flex-row items-center gap-5 mx-auto md:mx-0">
-                                    <div class="w-[470px] h-[145px] px-5 py-4 rounded-2xl border border-white/10 bg-white/[0.03] hover:border-[#F5C842]/60 hover:shadow-[0_0_20px_rgba(245,200,66,0.2)] hover:scale-105 transition-all duration-300 flex items-center gap-5">
+                                    <div class="w-full max-w-[470px] min-h-[145px] px-5 py-4 rounded-2xl border border-white/10 bg-white/[0.03] hover:border-[#F5C842]/60 hover:shadow-[0_0_20px_rgba(245,200,66,0.2)] hover:scale-105 transition-all duration-300 flex items-center gap-5">
                                         <div class="w-32 h-24 rounded-md overflow-hidden flex-shrink-0">
                                             <img src="assets/GYB_SYB.jpg" alt="Generate Start Your Business" class="w-full h-full object-cover">
                                         </div>
@@ -455,7 +471,7 @@
                                         <div class="w-8 border-t-2 border-dashed border-[#F5C842]"></div>
                                         <div class="w-3 h-3 rounded-full bg-[#F5C842]"></div>
                                     </div>
-                                    <div class="w-[470px] h-[145px] px-5 py-4 rounded-2xl border border-white/10 bg-white/[0.03] hover:border-[#F5C842]/60 hover:shadow-[0_0_20px_rgba(245,200,66,0.2)] hover:scale-105 transition-all duration-300 flex items-center gap-5">
+                                    <div class="w-full max-w-[470px] min-h-[145px] px-5 py-4 rounded-2xl border border-white/10 bg-white/[0.03] hover:border-[#F5C842]/60 hover:shadow-[0_0_20px_rgba(245,200,66,0.2)] hover:scale-105 transition-all duration-300 flex items-center gap-5">
                                         <div class="w-32 h-24 rounded-md overflow-hidden flex-shrink-0">
                                             <img src="assets/Dursikshya_Python.jpg" alt="Dursikshya Python" class="w-full h-full object-cover">
                                         </div>
@@ -471,7 +487,7 @@
                             <!-- Card 5 (Left) - Code IT (placeholder) -->
                             <div class="flex items-center justify-center md:justify-end">
                                     <div class="flex flex-col md:flex-row items-center gap-5 mx-auto md:mx-0">
-                                    <div class="w-[470px] h-[145px] px-5 py-4 rounded-2xl border border-white/10 bg-white/[0.03] hover:border-[#F5C842]/60 hover:shadow-[0_0_20px_rgba(245,200,66,0.2)] hover:scale-105 transition-all duration-300 flex items-center gap-5">
+                                    <div class="w-full max-w-[470px] min-h-[145px] px-5 py-4 rounded-2xl border border-white/10 bg-white/[0.03] hover:border-[#F5C842]/60 hover:shadow-[0_0_20px_rgba(245,200,66,0.2)] hover:scale-105 transition-all duration-300 flex items-center gap-5">
                                         <div class="w-32 h-24 rounded-md overflow-hidden flex-shrink-0">
                                             <img src="assets/GYB_SYB.jpg" alt="Code IT - Python with Django" class="w-full h-full object-cover">
                                         </div>
@@ -573,12 +589,12 @@
 
             <!-- WORK EXPERIENCE -->
             <div id="experience" class="mt-16 mb-0 select-none">
-                <div class="text-center mb-12 px-5 sm:px-8 lg:px-12">
+                <div class="text-center mb-10 px-2 sm:px-8 lg:px-12">
                     <p class="text-[#F5C842] font-semibold tracking-widest uppercase text-sm mb-2 drop-shadow-[0_0_22px_rgba(245,200,66,0.36)]">Work Experience</p>
-                    <h2 class="font-[Montserrat] text-4xl sm:text-5xl font-bold">Where I've <span class="text-[#F5C842]">Worked</span></h2>
+                    <h2 class="font-[Montserrat] text-3xl sm:text-4xl lg:text-5xl font-bold">Where I've <span class="text-[#F5C842]">Worked</span></h2>
                 </div>
-                <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-                    <div class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 shadow-[0_28px_90px_rgba(0,0,0,0.18)]">
+                <div class="mx-auto max-w-7xl px-2 sm:px-8 lg:px-12">
+                    <div class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] p-6 shadow-[0_28px_90px_rgba(0,0,0,0.18)] sm:p-8">
                         <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#F5C842]/0 via-[#F5C842] to-[#F5C842]/0"></div>
                         <div class="relative flex flex-col gap-8">
                             <div class="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
@@ -626,13 +642,13 @@
 
 
     <!-- CONTACT -->
-    <section id="contact" class="relative pt-6 pb-20 bg-[#111111] px-5 sm:px-8 lg:px-12">
+    <section id="contact" class="relative pt-6 pb-16 bg-[#111111] px-4 sm:px-8 lg:px-12 lg:pb-20">
         <!-- Heading -->
-        <div class="text-center mb-14 px-5 sm:px-8 lg:px-12">
+        <div class="text-center mb-10 px-2 sm:px-8 lg:px-12">
             <p class="text-[#F5C842] font-semibold tracking-widest uppercase text-sm mb-2 drop-shadow-[0_0_22px_rgba(245,200,66,0.36)]">
                 Contact
             </p>
-            <h2 class="font-[Montserrat] text-4xl sm:text-5xl font-bold">
+            <h2 class="font-[Montserrat] text-3xl sm:text-4xl lg:text-5xl font-bold">
                 Let's <span class="text-[#F5C842]">Work Together</span>
             </h2>
             <p class="text-gray-400 mt-5 max-w-2xl mx-auto">
@@ -644,7 +660,7 @@
             <div class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] shadow-[0_40px_90px_rgba(0,0,0,0.32)] backdrop-blur-xl">
                 <div class="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
                     <!-- LEFT : CONTACT FORM -->
-                    <div class="relative z-10 p-8 lg:p-12">
+                    <div class="relative z-10 p-6 sm:p-8 lg:p-12">
                         <h3 class="text-3xl font-bold text-white mb-4">
                             Send Me a Message
                         </h3>
@@ -697,7 +713,7 @@
                     </div>
 
                     <!-- RIGHT : CONTACT INFO -->
-                    <div class="relative z-10 overflow-hidden border-t lg:border-t-0 lg:border-l border-white/10 bg-white/[0.03] p-8 lg:p-12">
+                    <div class="relative z-10 overflow-hidden border-t lg:border-t-0 lg:border-l border-white/10 bg-white/[0.03] p-6 sm:p-8 lg:p-12">
                         <div class="rounded-[1.75rem] border border-white/10 bg-white/[0.025] p-6 mb-10 text-center">
                             <span class="inline-flex rounded-full bg-[#F5C842]/10 px-3 py-1.5 text-sm font-semibold text-[#F5C842]">Available for hire</span>
                             <p class="mt-4 text-gray-300">Open to freelance work, internships, and full-time opportunities. Let's bring your next web app or product idea to life.</p>
@@ -756,6 +772,69 @@
             </div>
         </div>
     </section>
+
+    <footer class="border-t border-white/10 bg-[#0d0d0d] px-4 py-10 sm:px-8 lg:px-12">
+        <div class="mx-auto flex max-w-6xl flex-col gap-8 sm:gap-10">
+            <div class="flex flex-col gap-8 border-b border-white/10 pb-8 text-center lg:flex-row lg:items-start lg:justify-between lg:text-left">
+                <div class="mx-auto max-w-lg lg:mx-0">
+                    <div class="flex flex-col items-center gap-3 sm:flex-row sm:items-center sm:justify-center lg:justify-start">
+                        <img src="assets/LOGO.png" alt="Paban Bhandari Logo" class="h-10 w-auto">
+                        <div>
+                            <h3 class="font-[Montserrat] text-xl font-semibold text-white">Paban Bhandari</h3>
+                            <p class="mt-1 text-sm uppercase tracking-[0.3em] text-[#F5C842]">Python Developer</p>
+                        </div>
+                    </div>
+                    <p class="mt-5 text-sm leading-relaxed text-gray-400">
+                        Turning ideas into modern web applications through Python, Django and JavaScript.
+                    </p>
+                </div>
+
+                <div class="flex flex-1 items-center justify-center">
+                    <div class="text-center">
+                        <h4 class="text-sm font-semibold uppercase tracking-[0.3em] text-[#F5C842]">Quick Links</h4>
+                        <div class="mt-4 flex flex-col gap-2 text-sm text-gray-400">
+                            <a href="#home" class="transition hover:text-[#F5C842]">Home</a>
+                            <a href="#about" class="transition hover:text-[#F5C842]">About</a>
+                            <a href="#projects" class="transition hover:text-[#F5C842]">Projects</a>
+                            <a href="#contact" class="transition hover:text-[#F5C842]">Contact</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center gap-3 lg:items-end">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#F5C842]">Socials</p>
+                    <div class="grid grid-cols-2 gap-3">
+                    <a href="https://github.com/Paban-Bhandari" target="_blank" rel="noopener noreferrer" class="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-gray-300 transition hover:border-[#F5C842]/70 hover:bg-[#F5C842]/10 hover:text-[#F5C842]" aria-label="GitHub">
+                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/paban-bhandari-b38239264/" target="_blank" rel="noopener noreferrer" class="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-gray-300 transition hover:border-[#F5C842]/70 hover:bg-[#F5C842]/10 hover:text-[#F5C842]" aria-label="LinkedIn">
+                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/quixotix__01/" target="_blank" rel="noopener noreferrer" class="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-gray-300 transition hover:border-[#F5C842]/70 hover:bg-[#F5C842]/10 hover:text-[#F5C842]" aria-label="Instagram">
+                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:bhandaripawan841@gmail.com" class="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-gray-300 transition hover:border-[#F5C842]/70 hover:bg-[#F5C842]/10 hover:text-[#F5C842]" aria-label="Email">
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8v10a2 2 0 01-2 2H5a2 2 0 01-2-2V8"/>
+                        </svg>
+                    </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-3 text-center text-sm text-gray-500 sm:flex-row sm:items-center sm:justify-between sm:text-left">
+                <p>&copy; 2026 Paban Bhandari • Designed &amp; Developed by Paban</p>
+                <a href="#home" class="transition hover:text-[#F5C842]">↑ Back to Top</a>
+            </div>
+        </div>
+    </footer>
 
     <div id="certificateModal" class="hidden fixed inset-0 z-[1100] bg-black/85 backdrop-blur-sm p-3 sm:p-5 lg:p-8">
         <div class="relative mx-auto flex h-full w-full items-center justify-center">

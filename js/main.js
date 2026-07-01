@@ -150,10 +150,11 @@ window.addEventListener('load', () => {
             document.body.style.paddingRight = '';
         };
 
-        certificatesSection.querySelectorAll('img').forEach((img) => {
-            img.addEventListener('click', () => {
-                if (img.getAttribute('src')) {
-                    openCertificateModal(img.getAttribute('src'));
+        certificatesSection.querySelectorAll('.certificate-card').forEach((card) => {
+            card.addEventListener('click', () => {
+                const image = card.querySelector('img');
+                if (image && image.getAttribute('src')) {
+                    openCertificateModal(image.getAttribute('src'));
                 }
             });
         });

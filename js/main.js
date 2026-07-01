@@ -108,6 +108,21 @@ window.addEventListener('load', () => {
         });
     }
 
+    const cursor = document.getElementById('customCursor');
+    const updateCursor = (event) => {
+        if (!cursor || window.innerWidth < 1024) return;
+        cursor.style.left = `${event.clientX}px`;
+        cursor.style.top = `${event.clientY}px`;
+    };
+
+    if (cursor) {
+        window.addEventListener('mousemove', updateCursor, { passive: true });
+        document.querySelectorAll('a, button, input, textarea, select, .certificate-card').forEach((element) => {
+            element.addEventListener('mouseenter', () => cursor.classList.add('cursor-hover'));
+            element.addEventListener('mouseleave', () => cursor.classList.remove('cursor-hover'));
+        });
+    }
+
     const navbar = document.getElementById('main-navbar');
     const updateNavbar = () => {
         if (!navbar) return;
